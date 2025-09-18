@@ -5,7 +5,8 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Formation Bureautique à Dakar | Gi.Code (Word, Excel, PowerPoint)</title>
   <meta name="description" content="Cours pratiques et abordables en Word, Excel et PowerPoint à Dakar. Supports à télécharger, certificat Gi.Code, contact WhatsApp.">
-  <link rel="canonical" href="https://g-mansour1977.github.io/Formation-en-Bureautique/">
+  <link rel="canonical" href="https://g-mansour1977.github.io/Gi.-Code-Bureautique-et-Developpement-WEB/">
+
   <style>
     * {
       margin: 0;
@@ -18,23 +19,21 @@
       background-size: cover;
       background-position: center;
       background-repeat: no-repeat;
-      height: 100vh;
+      min-height: 100vh;
+      font-family: 'Segoe UI', sans-serif;
+      color: white;
       display: flex;
       justify-content: center;
       align-items: center;
-      font-family: 'Segoe UI', sans-serif;
-    }
-
-    .contenu {
+      flex-direction: column;
       text-align: center;
-      color: white;
-      animation: fadeIn 2s ease-in-out;
     }
 
     h1 {
       font-size: 3em;
       text-shadow: 2px 2px 6px rgba(0,0,0,0.6);
       margin-bottom: 20px;
+      animation: fadeIn 2s ease-in-out;
     }
 
     .btn {
@@ -45,60 +44,58 @@
       border-radius: 30px;
       font-size: 1.1em;
       cursor: pointer;
+      text-decoration: none;
       transition: background-color 0.3s;
+      animation: fadeIn 3s ease-in-out;
     }
 
     .btn:hover {
       background-color: rgba(255, 255, 255, 0.2);
     }
 
+    .fb-container {
+      margin-top: 40px;
+      background: rgba(0,0,0,0.5);
+      padding: 20px;
+      border-radius: 15px;
+      width: 90%;
+      max-width: 600px;
+    }
+
     @keyframes fadeIn {
-      from {
-        opacity: 0;
-        transform: translateY(-20px);
-      }
-      to {
-        opacity: 1;
-        transform: translateY(0);
-      }
+      from {opacity: 0; transform: translateY(-20px);}
+      to {opacity: 1; transform: translateY(0);}
     }
   </style>
 </head>
 <body>
-  <div class="contenu">
-    <h1>Bienvenue sur Gi.Code</h1>
-    <a href="cours.html" class="btn">Commencer</a>
+
+  <h1>Bienvenue sur Gi.Code</h1>
+  <a href="cours.html" class="btn">Commencer</a>
+
+  <!-- ✅ Plugins Facebook -->
+  <div class="fb-container">
+    <!-- Bouton J'aime + Partager -->
+    <div class="fb-like"
+         data-href="https://g-mansour1977.github.io/Gi.-Code-Bureautique-et-Developpement-WEB/"
+         data-width=""
+         data-layout="standard"
+         data-action="like"
+         data-size="large"
+         data-share="true">
+    </div>
+
+    <hr style="margin:20px 0;border-color:rgba(255,255,255,0.3);">
+
+    <!-- Zone de commentaires -->
+    <div class="fb-comments"
+         data-href="https://g-mansour1977.github.io/Gi.-Code-Bureautique-et-Developpement-WEB/"
+         data-width="100%"
+         data-numposts="5">
+    </div>
   </div>
 
-  ...
-<script type="application/ld+json">
-{ ...FAQ JSON-LD ici... }
-</script>
-
-<script type="application/ld+json">
-{ ...LocalBusiness JSON-LD ici... }
-</script>
-
-  <!-- ✅ Bouton J'aime et Partager -->
-  <div class="fb-like"
-       data-href="https://g-mansour1977.github.io/Gi.-Code-Bureautique-et-Developpement-WEB/"
-       data-width=""
-       data-layout="standard"
-       data-action="like"
-       data-size="large"
-       data-share="true">
-  </div>
-
-  <hr>
-
-  <!-- ✅ Zone de commentaires -->
-  <div class="fb-comments"
-       data-href="https://g-mansour1977.github.io/Gi.-Code-Bureautique-et-Developpement-WEB/"
-       data-width="500"
-       data-numposts="5">
-  </div>
-
-  <!-- ✅ SDK Facebook (avec ton App ID) -->
+  <!-- ✅ SDK Facebook (App ID déjà configuré) -->
   <div id="fb-root"></div>
   <script async defer crossorigin="anonymous"
     src="https://connect.facebook.net/fr_FR/sdk.js#xfbml=1&version=v23.0&appId=1498839574651232">
