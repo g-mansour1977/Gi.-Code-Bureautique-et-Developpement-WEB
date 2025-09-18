@@ -1,82 +1,146 @@
 <!doctype html>
-<html lang=fr>
-<meta charset=UTF-8>
-<meta name=viewport content="width=device-width,initial-scale=1">
-<meta name=google-site-verification content=_1Sd5bjaIfirEJNnN8DcS-UEI90IdSV0Z4ZQglpCrFw>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
 <title>Gi.Code Bureautique - Formation Word, Excel, PowerPoint à Dakar</title>
-<meta name=description content="Apprenez Word, Excel et PowerPoint avec Gi.Code Bureautique. Formations pratiques, PDF téléchargeables et accompagnement à Dakar.">
-<title>Cours Bureautique</title>
-<style>body{font-family:Arial,sans-serif;margin:0}.cours-section{padding:2rem;background-color:#f8f9fa;text-align:center}.cours-container{display:flex;flex-wrap:wrap;justify-content:center;gap:1.5rem;margin-top:1rem}.carte-cours{background:#fff;border-radius:12px;padding:1.5rem;box-shadow:0 2px 10px rgba(0,0,0,.1);width:280px}.carte-cours h3{margin-bottom:.5rem}.btn-principal,.btn-secondaire{display:inline-block;margin-top:.5rem;padding:.6rem 1.2rem;border-radius:8px;text-decoration:none;font-weight:700}.btn-secondaire{background-color:#6c757d;color:#fff;margin-right:5px}.btn-principal{background-color:#007bff;color:#fff}.bandeau-accueil{display:flex;align-items:center;justify-content:space-between;background-color:#e9ecef;padding:1rem 2rem;border-bottom:3px solid #007bff;flex-wrap:wrap;text-align:center}.drapeau{width:48px;height:auto}.logo-bureau{width:50px;height:auto}.texte-accueil{flex-grow:1;padding:0 1rem}.texte-accueil h1{margin:0;font-size:1.5rem;color:#007bff}.texte-accueil p{margin:.2rem 0;color:#333}#auth{background:#f8f9fa;padding:80px 20px;text-align:center}#auth input{padding:10px;font-size:1rem;width:250px;margin-top:10px;border-radius:5px;border:1px solid #ccc}#auth button{margin-top:15px;padding:10px 20px;font-size:1rem;background-color:#007bff;color:#fff;border:none;border-radius:5px;cursor:pointer}#cours{display:none}  .cv-photo {flex: 1; max-width: 100px;}
-    .cv-photo img {width: 50%; border-radius: 50%; box-shadow: 0 2px 8px rgba(0,0,0,.2);}</style>
+<meta name="description" content="Apprenez Word, Excel et PowerPoint avec Gi.Code Bureautique. Formations pratiques, PDF téléchargeables et accompagnement à Dakar.">
+<style>
+body{font-family:Arial,sans-serif;margin:0}
+
+/* --- HEADER HERO --- */
+.header-hero{background:linear-gradient(135deg,#007bff,#00b4d8);color:#fff;padding:60px 20px;text-align:center}
+.hero-content{display:flex;flex-wrap:wrap;align-items:center;justify-content:center;max-width:1100px;margin:0 auto;gap:30px}
+.hero-photo img{width:180px;height:180px;border-radius:50%;object-fit:cover;box-shadow:0 8px 20px rgba(0,0,0,.2);border:4px solid #fff}
+.hero-text h1{font-size:2rem;margin-bottom:10px}
+.hero-text h2{font-weight:600;font-size:1.2rem;margin-bottom:10px}
+.hero-text p{margin:6px 0;font-size:1rem}
+.hero-buttons{margin-top:15px}
+.btn-primary, .btn-secondary{display:inline-block;padding:12px 25px;margin:5px;border-radius:8px;text-decoration:none;font-weight:700;transition:0.3s;cursor:pointer}
+.btn-primary{background:#ffdd57;color:#333;border:none}
+.btn-primary:hover{background:#ffe680}
+.btn-secondary{background:rgba(255,255,255,.2);color:#fff;border:2px solid #fff}
+.btn-secondary:hover{background:#fff;color:#007bff}
+
+/* --- NAVIGATION --- */
+.navbar{position:sticky;top:0;background:#fff;border-bottom:3px solid #007bff;z-index:1000}
+.nav-container{max-width:1100px;margin:0 auto;padding:10px 20px;display:flex;justify-content:space-between;align-items:center;gap:15px}
+.nav-logo{font-weight:700;font-size:1.3rem;color:#007bff;text-decoration:none}
+.nav-links{list-style:none;display:flex;gap:15px;margin:0;padding:0}
+.nav-links a{text-decoration:none;color:#333;font-weight:600;padding:6px 10px;border-radius:6px;transition:0.3s}
+.nav-links a:hover{background:#007bff;color:#fff}
+.nav-search input{padding:6px 10px;border:1px solid #ccc;border-radius:6px;width:180px}
+.btn-pay{background:#ffdd57;color:#333;padding:8px 14px;border-radius:8px;font-weight:700;text-decoration:none;transition:0.3s}
+.btn-pay:hover{background:#ffe680}
+.nav-toggle{display:none;font-size:1.8rem;cursor:pointer;color:#007bff}
+
+/* --- RESPONSIVE --- */
+@media(max-width:768px){
+  .nav-links{position:absolute;top:60px;right:0;background:#fff;flex-direction:column;width:200px;border-left:3px solid #007bff;padding:15px 0;display:none}
+  .nav-links.show{display:flex}
+  .nav-search{display:none}
+  .nav-toggle{display:block}
+  .hero-content{flex-direction:column;text-align:center}
+  .hero-photo img{width:150px;height:150px}
+  .hero-text h1{font-size:1.6rem}
+}
+
+/* --- FENÊTRE D'ACCUEIL --- */
+.intro-screen{position:fixed;top:0;left:0;width:100%;height:100%;background:linear-gradient(135deg,#007bff,#00b4d8);color:#fff;display:flex;align-items:center;justify-content:center;z-index:2000;text-align:center;transition:opacity .6s,visibility .6s}
+.intro-content{max-width:600px;padding:20px}
+.intro-photo{width:150px;height:150px;border-radius:50%;border:4px solid #fff;margin-bottom:20px;box-shadow:0 8px 20px rgba(0,0,0,.3)}
+.intro-screen.hide{opacity:0;visibility:hidden;pointer-events:none}
+
+/* --- MODAL VIDEO --- */
+.modal{display:none;position:fixed;z-index:3000;top:0;left:0;width:100%;height:100%;background:rgba(0,0,0,0.7);justify-content:center;align-items:center}
+.modal-content{position:relative;background:#fff;padding:20px;border-radius:10px;max-width:800px;width:90%}
+.close{position:absolute;right:20px;top:10px;font-size:28px;cursor:pointer;color:#333}
+
+/* --- COURS --- */
+.cours-section{padding:2rem;background-color:#f8f9fa;text-align:center}
+.cours-container{display:flex;flex-wrap:wrap;justify-content:center;gap:1.5rem;margin-top:1rem}
+.carte-cours{background:#fff;border-radius:12px;padding:1.5rem;box-shadow:0 2px 10px rgba(0,0,0,.1);width:280px;text-align:left}
+.carte-cours h3{margin-bottom:.5rem}
+.carte-cours ul{padding-left:20px}
+.carte-cours a{display:inline-block;margin-top:.5rem;padding:.6rem 1.2rem;border-radius:8px;text-decoration:none;font-weight:700}
+.btn-secondaire{background-color:#6c757d;color:#fff;margin-right:5px}
+.btn-principal{background-color:#007bff;color:#fff}
+.carte-cours a:hover{opacity:0.85}
+
+/* --- FOOTER --- */
+footer{text-align:center;padding:20px;background:#f0f0f0;margin-top:2rem}
+</style>
 </head>
 <body>
 
-     
-
-  <!-- Accueil (CV + vidéos) -->
-  <header id="accueil">
-    <h1>👨‍💻 Mansour Gueye – Gi.Code</h1>
-    <div class="cv-container">
-      <div class="cv-photo">
-        <img src="images Gi. Code.jpg" alt="Photo de profil">
-      </div>
-      <div class="cv-details">
-        <h2>Mon CV</h2>
-        <p><strong>Formateur & Développeur Web</strong></p>
-        <p>📍 Dakar, Sénégal</p>
-        <p>💼 Spécialiste en Word, Excel, PowerPoint, HTML, CSS et JavaScript</p>
-        <p>🎯 Passionné par l’éducation numérique et la formation interactive</p>
-        <h3>Compétences</h3>
-        <ul>
-          <li>Microsoft Office (Word, Excel, PowerPoint)</li>
-          <li>Développement Web (HTML, CSS, JavaScript)</li>
-          <li>Conception de supports pédagogiques PDF/vidéo</li>
-        </ul>
-      </div>
-    </div>
-
-     <!-- Menu -->
-  <nav>
-    <a href="#accueil">Accueil</a>
-    <a href="#word">Word</a>
-    <a href="#excel">Excel</a>
-    <a href="#powerpoint">PowerPoint</a>
-    <a href="#html">HTML</a>
-    <a href="#css">CSS</a>
-    <a href="#js">JavaScript</a>
-    <a href="#contact">Contact</a>
-  </nav>
-    <h2 style="margin-top:40px;">📹 Vidéos de présentation</h2>
-    <div class="video">
-      <h3>Présentation des cours Word</h3>
-
-    <iframe width="560" height="315" 
-          src="https://www.youtube.com/embed=SfwJV9nCseU&list=PL8sQnj6qF1Lvo8lXJhtY_RjedsNnARPNY" 
-          frameborder="0" 
-          allowfullscreen>
-    </iframe>
-
-    <div class="video">
-      <h3>Présentation des cours PowerPoint</h3>
-      <iframe src="https://www.youtube.com/embed/Yy3DHI07-pE" allowfullscreen></iframe>
-    </div>
-  </header>
-
-<header class=bandeau-accueil>
-<img src=https://upload.wikimedia.org/wikipedia/commons/thumb/f/fd/Flag_of_Senegal.svg/64px-Flag_of_Senegal.png alt="Drapeau du Sénégal" class=drapeau>
-<div class=texte-accueil>
-
-<h1>📚 Gi. Code-Bureautique et Developpement WEB – Sénégal</h1>
-<p>Des cours payants-interactifs pour maîtriser Word, Excel, PowerPoint et pour la création de sites webs interactifs, de logiciels etc</p>
+<!-- === FENÊTRE D'ACCUEIL === -->
+<div id="intro-screen" class="intro-screen">
+  <div class="intro-content">
+    <img src="images Gi. Code.jpg" alt="Photo de Mansour" class="intro-photo">
+    <h1>Bienvenue sur <span class="brand">Gi.Code Bureautique</span></h1>
+    <p>Formations Word, Excel, PowerPoint & Développement Web</p>
+    <button id="btnVideo" class="btn-primary">🎥 Voir la présentation</button>
+    <button id="enter-site" class="btn-primary">🚀 Entrer sur le site</button>
+  </div>
 </div>
-<img src=logo.jpg alt="Gi. Code" class=logo-bureau>
+
+<!-- === MODAL VIDEO === -->
+<div id="videoModal" class="modal">
+  <div class="modal-content">
+    <span class="close" id="closeVideo">&times;</span>
+    <iframe id="videoFrame" width="100%" height="315"
+      src="https://www.youtube.com/embed/ID_DE_TA_VIDEO?rel=0"
+      title="Présentation Gi.Code" frameborder="0" allowfullscreen></iframe>
+  </div>
+</div>
+
+<!-- === HEADER HERO === -->
+<header id="accueil" class="header-hero">
+  <div class="hero-content">
+    <div class="hero-photo">
+      <img src="images Gi. Code.jpg" alt="Photo de Mansour Gueye">
+    </div>
+    <div class="hero-text">
+      <h1>👨‍💻 Mansour Gueye – <span class="brand">Gi.Code</span></h1>
+      <h2>Formateur & Développeur Web</h2>
+      <p>📍 Dakar, Sénégal • 💼 Spécialiste en <strong>Word</strong>, <strong>Excel</strong>, <strong>PowerPoint</strong>, HTML, CSS et JavaScript</p>
+      <p>🎯 Passionné par l’éducation numérique et la <strong>formation interactive</strong></p>
+      <div class="hero-buttons">
+        <a href="#cours" class="btn-primary">📚 Voir les Cours</a>
+        <a href="mailto:gmansour1977@gmail.com" class="btn-secondary">📧 Me Contacter</a>
+      </div>
+    </div>
+  </div>
 </header>
-<section class=cours-section>
-<h2>
-📚 Cours disponibles
-<img src=logo.jpg alt="Drapeau du Sénégal" width=32 style=vertical-align:middle;margin-left:8px>
-</h2>
-<div class=cours-container>
+
+<!-- === NAVIGATION === -->
+<nav class="navbar">
+  <div class="nav-container">
+    <a href="#accueil" class="nav-logo">🚀 Gi.Code</a>
+    <form class="nav-search" onsubmit="return false;">
+      <input type="text" id="searchInput" placeholder="Rechercher un cours…">
+    </form>
+    <ul class="nav-links">
+      <li><a href="#accueil">Accueil</a></li>
+      <li><a href="#word">Word</a></li>
+      <li><a href="#excel">Excel</a></li>
+      <li><a href="#powerpoint">PowerPoint</a></li>
+      <li><a href="#html">HTML</a></li>
+      <li><a href="#css">CSS</a></li>
+      <li><a href="#js">JavaScript</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+    <a href="https://pay.wave.com/m/M_sn_VPYlAUnvz263/c/sn/?amount=7000" target="_blank" class="btn-pay">💳 Payer</a>
+    <div class="nav-toggle" id="nav-toggle">☰</div>
+  </div>
+</nav>
+
+<!-- === SECTIONS COURS === -->
+<section id="cours" class="cours-section">
+<h2>📚 Cours disponibles</h2>
+<div class="cours-container">
+
+<!-- Word -->
 <div class=carte-cours>
 <h3>💻 Word</h3>
 <p>Maîtrisez la mise en forme de documents professionnels.</p>
@@ -90,6 +154,8 @@
 <li><a href="Gi. Code Cours Word 9." class=btn-secondaire>📥 Télécharger cours 9</a></li>
 </ul>
 </div>
+
+<!-- Excel -->
 <div class=carte-cours>
 <h3>📊 Excel</h3>
 <p>Créez des tableaux dynamiques et utilisez des formules.</p>
@@ -105,10 +171,12 @@
 <li><a href="Skill 7 Excel." class=btn-secondaire>📥 Télécharger cours 7</a></li>
 </ul>
 </div>
+
+<!-- PowerPoint -->
 <div class=carte-cours>
 <h3>📽 PowerPoint</h3>
 <p>Concevez des présentations modernes et efficaces.</p>
-<a href=powerpoint.html class=btn-principal>Voir les leçons</a>
+<a href=powerpoint class=btn-principal>Voir les leçons</a>
 <ul>
 <li><a href="Gi. Code Cours 1 PowerPoint.pdf" download class=btn-secondaire>📥 Télécharger cours 1</a></li>
 <li><a href="Gi. Code Cours 2 PowerPoint.pdf" download class=btn-secondaire>📥 Télécharger cours 2</a></li>
@@ -119,6 +187,7 @@
 </ul>
 </div>
 
+<!-- HTML -->
 <div class=carte-cours>
 <h3>📊 HTML</h3>
 <p>Créez la structure de pages web, des formulaires interactifs....</p>
@@ -135,6 +204,7 @@
 </ul>
 </div>
 
+<!-- CSS -->
 <div class=carte-cours>
 <h3>📊 CSS</h3>
 <p>Styliser les pages web .</p>
@@ -151,6 +221,7 @@
 </ul>
 </div>
 
+<!-- Flexbox -->
 <div class=carte-cours>
 <h3>📊 Flexbox</h3>
 <p>Styliser les pages web</p>
@@ -167,7 +238,8 @@
  </ul>
  </div>
 
- <div class=carte-cours>
+<!-- Algorithme -->
+<div class=carte-cours>
 <h3>📊 Algorithme</h3>
 <p>Développez la logique de la programmation</p>
 <a href=cours.algo class=btn-principal>Voir les leçons</a>
@@ -182,7 +254,7 @@
  <li><a href="Algo 7 ." class=btn-secondaire>📥 Télécharger cours 7</a></li>
  </ul>
  </div>
-
+<!-- JavaScript -->
 <div class=carte-cours>
 <h3>📊 JavaScript</h3>
 <p>Rendez interactifs les pages web, ajoutez du code, </p>
@@ -199,18 +271,133 @@
 </ul>
 </div>
 
+</section>
 </div>
+
+<!-- Ajouter d’autres cartes si besoin -->
+  </div>
 </section>
 
-<footer style=text-align:center;padding:20px;background:#f0f0f0;margin-top:2rem>
-<p>📞 Contactez-nous au : <a href=tel:+221776813749>77 681 37 49</a></p>
-<p>📧 Email : <a href=mailto:gmansour1977@gmail.com>gmansour1977@gmail.com</a></p>
-<a href="https://pay.wave.com/m/M_sn_VPYlAUnvz263/c/sn/?amount=7000" target=_blank style="display:inline-block;padding:12px 20px;background-color:#09f;color:#fff;text-decoration:none;font-weight:700;border-radius:6px">
-💳 Payer avec Wave – #15000# FCFA. Accédez à une Formation complète.
-</a>
+<!-- Footer -->
+<footer>
+  <p>📞 <a href="tel:+221776813749">77 681 37 49</a> •
+     📧 <a href="mailto:gmansour1977@gmail.com">gmansour1977@gmail.com</a></p>
+  <a href="https://pay.wave.com/m/M_sn_VPYlAUnvz263/c/sn/?amount=7000"
+     target="_blank"
+     style="display:inline-block;padding:12px 20px;background:#09f;color:#fff;text-decoration:none;font-weight:700;border-radius:6px">
+     💳 Payer avec Wave – #15000# FCFA
+  </a>
 </footer>
+
+<script>
+// Fenêtre d'accueil
+document.getElementById('enter-site').addEventListener('click',()=>{
+  document.getElementById('intro-screen').classList.add('hide');
+});
+
+// Menu mobile
+const toggle=document.getElementById('nav-toggle');
+const links=document.querySelector('.nav-links');
+toggle.addEventListener('click',()=>links.classList.toggle('show'));
+
+// Recherche simple
+document.getElementById('searchInput').addEventListener('keyup',e=>{
+  if(e.key==='Enter'){
+    const v=e.target.value.toLowerCase();
+    const map={word:'#word',excel:'#excel',power:'#powerpoint',html:'#html',css:'#css',js:'#js'};
+    for(const k in map){if(v.includes(k)){location.hash=map[k];return}}
+    alert('Cours non trouvé');e.target.value='';
+  }
+});
+</script>
+
+<script>
+// === Fenêtre d'accueil ===
+const intro = document.getElementById('intro-screen');
+const enterBtn = document.getElementById('enter-site');
+enterBtn.addEventListener('click', () => {
+  intro.classList.add('hide');
+});
+
+// === Modale vidéo ===
+const modal = document.getElementById('videoModal');
+const btnVideo = document.getElementById('btnVideo');
+const closeVideo = document.getElementById('closeVideo');
+const videoFrame = document.getElementById('videoFrame');
+
+btnVideo.addEventListener('click', () => { modal.style.display = 'flex'; });
+closeVideo.addEventListener('click', () => { 
+  modal.style.display = 'none'; 
+  videoFrame.src = videoFrame.src; // stop la vidéo
+});
+
+// Fermer modal si clic en dehors
+window.addEventListener('click', e => {
+  if(e.target === modal){
+    modal.style.display = 'none';
+    videoFrame.src = videoFrame.src;
+  }
+});
+</script>
+
+<script>
+// === Fenêtre d'accueil ===
+const intro = document.getElementById('intro-screen');
+const enterBtn = document.getElementById('enter-site');
+enterBtn.addEventListener('click', () => {
+  intro.classList.add('hide');
+});
+
+// === Modale vidéo ===
+const modal = document.getElementById('videoModal');
+const btnVideo = document.getElementById('btnVideo');
+const closeVideo = document.getElementById('closeVideo');
+const videoFrame = document.getElementById('videoFrame');
+
+btnVideo.addEventListener('click', () => { modal.style.display = 'flex'; });
+closeVideo.addEventListener('click', () => { 
+  modal.style.display = 'none'; 
+  videoFrame.src = videoFrame.src; // stop la vidéo
+});
+
+// Fermer modal si clic en dehors
+window.addEventListener('click', e => {
+  if(e.target === modal){
+    modal.style.display = 'none';
+    videoFrame.src = videoFrame.src;
+  }
+});
+</script>
+
+ <h1>Exemple d’intégration Facebook</h1>
+  <p>Voici un bouton J’aime et une zone de commentaires alimentés par Facebook.</p>
+
+  <!-- ✅ Bouton J'aime et Partager -->
+  <div class="fb-like"
+       data-href="https://g-mansour1977.github.io/Gi.-Code-Bureautique-et-Developpement-WEB/"
+       data-width=""
+       data-layout="standard"
+       data-action="like"
+       data-size="large"
+       data-share="true">
+  </div>
+
+  <hr>
+
+  <!-- ✅ Zone de commentaires -->
+  <div class="fb-comments"
+       data-href="https://ton-site.com"
+       data-width="500"
+       data-numposts="5">
+  </div>
+
+  <!-- ✅ SDK Facebook (avec ton App ID) -->
+  <div id="fb-root"></div>
+  <script async defer crossorigin="anonymous"
+    src="https://connect.facebook.net/fr_FR/sdk.js#xfbml=1&version=v23.0&appId=1498839574651232">
+  </script>
+
 </body>
 </html>
-
 
 
