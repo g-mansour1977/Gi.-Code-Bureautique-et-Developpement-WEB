@@ -1,10 +1,11 @@
 <?php
-$host = "localhost"; // ou fourni par 000WebHost
-$db = "elearning";
-$user = "ton_utilisateur";
-$pass = "ton_mot_de_passe";
+$host = "localhost";
+$user = "ton_utilisateur";   // ← à changer
+$pass = "ton_mot_de_passe"; // ← à changer
+$db   = "elearning";
 
 $conn = new mysqli($host, $user, $pass, $db);
-if ($conn->connect_error) die("Erreur: " . $conn->connect_error);
-echo "Connexion réussie !";
+if ($conn->connect_error) {
+    die("Connexion échouée : " . $conn->connect_error);
+}
 ?>
