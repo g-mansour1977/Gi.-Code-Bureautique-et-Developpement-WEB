@@ -348,6 +348,26 @@ window.addEventListener('click', e => {
     videoFrame.src = videoFrame.src;
   }
 });
+
+  // script.js
+<script src="script.js"></script>
+// Exemple : récupérer les utilisateurs
+fetch('https://tonserveur.com/api/users')
+  .then(res => res.json())
+  .then(data => console.log("Utilisateurs :", data))
+  .catch(err => console.error("Erreur :", err));
+
+// Exemple : envoyer un message
+fetch('https://tonserveur.com/api/message', {
+  method: 'POST',
+  headers: { 'Content-Type': 'application/json' },
+  body: JSON.stringify({
+    user_id: 1,
+    message: "Bonjour depuis Gi.Code !"
+  })
+})
+  .then(res => res.text())
+  .then(response => console.log(response));
 </script>
 </body>
 </html>
