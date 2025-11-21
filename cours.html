@@ -208,7 +208,7 @@ async function chargerCours() {
   const container = document.querySelector(".cours-container");
 
   try {
-    const response = await fetch("cours.json"); 
+    const response = await fetch("data/cours.json"); 
     const data = await response.json();
 
     container.innerHTML = ""; // Vide l’ancien HTML
