@@ -1,0 +1,243 @@
+<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="description" content="Apprenez Word, Excel et PowerPoint avec Gi.Code Bureautique. Formations pratiques, PDF téléchargeables et accompagnement à Dakar.">
+<meta name="google-site-verification" content="_1Sd5bjaIfirEJNnN8DcS-UEI90IdSV0Z4ZQglpCrFw">
+<title>Gi.Code Bureautique – Cours Word, Excel, PowerPoint</title>
+
+<style>
+/* ===== Base ===== */
+body{margin:0;font-family:Arial,sans-serif;background:#fff;color:#333}
+h1,h2,h3{margin:0}
+
+/* ===== Intro Screen ===== */
+.intro-screen{position:fixed;top:0;left:0;width:100%;height:100%;
+  background:linear-gradient(135deg,#007bff,#00b4d8);color:#fff;
+  display:flex;align-items:center;justify-content:center;
+  z-index:2000;text-align:center;transition:opacity .6s ease,visibility .6s ease;}
+.intro-screen.hide{opacity:0;visibility:hidden;pointer-events:none;}
+.intro-content{max-width:600px;padding:20px}
+.intro-photo{width:150px;height:150px;border-radius:50%;border:4px solid #fff;
+  margin-bottom:20px;box-shadow:0 8px 20px rgba(0,0,0,.3)}
+#enter-site{background:#ffdd57;color:#333;border:none;padding:12px 30px;
+  font-size:1.2rem;border-radius:8px;cursor:pointer;font-weight:700}
+
+/* ===== Hero ===== */
+.header-hero{background:linear-gradient(135deg,#007bff 0%,#00b4d8 100%);
+  color:#fff;padding:60px 20px;text-align:center}
+.hero-content{display:flex;flex-wrap:wrap;align-items:center;
+  justify-content:center;max-width:1100px;margin:auto;gap:30px}
+.hero-photo img{width:180px;height:180px;border-radius:50%;
+  object-fit:cover;border:4px solid #fff;box-shadow:0 8px 20px rgba(0,0,0,.2)}
+.hero-text h1{font-size:2rem;margin-bottom:10px}
+.hero-text h2{font-weight:600;font-size:1.2rem;margin-bottom:10px}
+.hero-buttons a{display:inline-block;padding:12px 25px;margin:5px;
+  border-radius:8px;text-decoration:none;font-weight:700;transition:.3s}
+.btn-primary{background:#ffdd57;color:#333}
+.btn-primary:hover{background:#ffe680}
+.btn-secondary{background:rgba(255,255,255,.2);color:#fff;border:2px solid #fff}
+.btn-secondary:hover{background:#fff;color:#007bff}
+
+/* ===== Navbar ===== */
+.navbar{position:sticky;top:0;background:#fff;border-bottom:3px solid #007bff;z-index:1000}
+.nav-container{max-width:1100px;margin:auto;padding:10px 20px;
+  display:flex;justify-content:space-between;align-items:center;gap:15px}
+.nav-logo{font-weight:700;font-size:1.3rem;color:#007bff;text-decoration:none}
+.nav-search input{padding:6px 10px;border:1px solid #ccc;border-radius:6px;width:180px}
+.nav-links{list-style:none;display:flex;gap:15px;margin:0;padding:0}
+.nav-links a{text-decoration:none;color:#333;font-weight:600;
+  padding:6px 10px;border-radius:6px;transition:.3s}
+.nav-links a:hover{background:#007bff;color:#fff}
+.btn-pay{background:#ffdd57;color:#333;padding:8px 14px;border-radius:8px;
+  font-weight:700;text-decoration:none;transition:.3s}
+.btn-pay:hover{background:#ffe680}
+.nav-toggle{display:none;font-size:1.8rem;cursor:pointer;color:#007bff}
+
+/* Responsive navbar */
+@media(max-width:768px){
+  .nav-links{position:absolute;top:60px;right:0;background:#fff;flex-direction:column;
+    width:200px;border-left:3px solid #007bff;padding:15px 0;display:none}
+  .nav-links.show{display:flex}
+  .nav-search{display:none}
+  .nav-toggle{display:block}
+}
+
+/* ===== Cours ===== */
+.cours-section{padding:2rem;background:#f8f9fa;text-align:center}
+.cours-container{display:flex;flex-wrap:wrap;justify-content:center;
+  gap:1.5rem;margin-top:1rem}
+.carte-cours{background:#fff;border-radius:12px;padding:1.5rem;
+  box-shadow:0 2px 10px rgba(0,0,0,.1);width:280px;text-align:left}
+.carte-cours h3{margin-bottom:.5rem}
+.btn-principal,.btn-secondaire{display:inline-block;margin-top:.5rem;
+  padding:.6rem 1.2rem;border-radius:8px;text-decoration:none;font-weight:700}
+.btn-principal{background:#007bff;color:#fff}
+.btn-secondaire{background:#6c757d;color:#fff;margin-top:4px}
+
+/* ===== Footer ===== */
+footer{text-align:center;padding:20px;background:#f0f0f0;margin-top:2rem}
+</style>
+</head>
+
+<body>
+
+<!-- Intro -->
+<div id="intro-screen" class="intro-screen">
+  <div class="intro-content">
+    <img src="images Gi. Code.jpg" alt="Photo Mansour" class="intro-photo">
+    <h1>Bienvenue sur <span style="color:#ffdd57;font-weight:700">Gi.Code Bureautique</span></h1>
+    <p>Formations Word, Excel, PowerPoint & Développement Web</p>
+    <button id="enter-site">🚀 Entrer sur le site</button>
+  </div>
+</div>
+
+<!-- Hero -->
+<header class="header-hero" id="accueil">
+  <div class="hero-content">
+    <div class="hero-photo"><img src="images Gi. Code.jpg" alt="Mansour Gueye"></div>
+    <div class="hero-text">
+      <h1>👨‍💻 Mansour Gueye – <span style="color:#ffdd57;font-weight:700">Gi.Code</span></h1>
+      <h2>Formateur & Développeur Web</h2>
+      <p>📍 Dakar, Sénégal • Spécialiste en Word, Excel, PowerPoint, HTML, CSS, JS</p>
+      <div class="hero-buttons">
+        <a href="#cours" class="btn-primary">📚 Voir les cours</a>
+        <a href="mailto:gmansour1977@gmail.com" class="btn-secondary">📧 Me contacter</a>
+      </div>
+    </div>
+  </div>
+</header>
+
+<!-- Navigation -->
+<nav class="navbar">
+  <div class="nav-container">
+    <a href="#accueil" class="nav-logo">🚀 Gi.Code</a>
+    <form class="nav-search" onsubmit="return false;">
+      <input type="text" id="searchInput" placeholder="Rechercher un cours…">
+    </form>
+    <ul class="nav-links">
+      <li><a href="#word">Word</a></li>
+      <li><a href="#excel">Excel</a></li>
+      <li><a href="#powerpoint">PowerPoint</a></li>
+      <li><a href="#html">HTML</a></li>
+      <li><a href="#css">CSS</a></li>
+      <li><a href="#js">JavaScript</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+    <a href="https://pay.wave.com/m/M_sn_VPYlAUnvz263/c/sn/?amount=7000" target="_blank" class="btn-pay">💳 Payer</a>
+    <div class="nav-toggle" id="nav-toggle">☰</div>
+  </div>
+</nav>
+
+<!-- Cours -->
+<section class="cours-section" id="cours">
+  <h2>📚 Cours disponibles</h2>
+  <div class="cours-container">
+    <!-- Les cartes seront générées ici automatiquement -->
+    <p>Chargement des cours...</p>
+  </div>
+</section>
+
+
+<!-- === FACEBOOK PLUGINS === -->
+<h2>💬 Partage et Commentaires Facebook</h2>
+
+<!-- Bouton J'aime et Partager -->
+<div class="fb-like"
+     data-href="https://g-mansour1977.github.io/Gi.-Code-Bureautique-et-Developpement-WEB/"
+     data-width=""
+     data-layout="standard"
+     data-action="like"
+     data-size="large"
+     data-share="true">
+</div>
+
+<hr>
+
+<!-- Zone de commentaires -->
+<div class="fb-comments"
+     data-href="https://g-mansour1977.github.io/Gi.-Code-Bureautique-et-Developpement-WEB/"
+     data-width="100%"
+     data-numposts="5">
+</div>
+
+<!-- SDK Facebook -->
+<div id="fb-root"></div>
+<script async defer crossorigin="anonymous"
+  src="https://connect.facebook.net/fr_FR/sdk.js#xfbml=1&version=v23.0&appId=1498839574651232">
+</script>
+
+<!-- Footer -->
+<footer>
+  <p>📞 <a href="tel:+221776813749">77 681 37 49</a> •
+     📧 <a href="mailto:gmansour1977@gmail.com">gmansour1977@gmail.com</a></p>
+  <a href="https://pay.wave.com/m/M_sn_VPYlAUnvz263/c/sn/?amount=7000"
+     target="_blank"
+     style="display:inline-block;padding:12px 20px;background:#09f;color:#fff;text-decoration:none;font-weight:700;border-radius:6px">
+     💳 Payer avec Wave – #15000# FCFA
+  </a>
+</footer>
+
+
+<script>
+// Fenêtre d'accueil
+document.getElementById('enter-site').addEventListener('click',()=>{
+  document.getElementById('intro-screen').classList.add('hide');
+});
+
+// Menu mobile
+const toggle=document.getElementById('nav-toggle');
+const links=document.querySelector('.nav-links');
+toggle.addEventListener('click',()=>links.classList.toggle('show'));
+
+// Recherche simple
+document.getElementById('searchInput').addEventListener('keyup',e=>{
+  if(e.key==='Enter'){
+    const v=e.target.value.toLowerCase();
+    const map={word:'#word',excel:'#excel',power:'#powerpoint',html:'#html',css:'#css',js:'#js'};
+    for(const k in map){if(v.includes(k)){location.hash=map[k];return}}
+    alert('Cours non trouvé');e.target.value='';
+  }
+});
+</script>
+
+
+<script>
+async function chargerCours() {
+  const container = document.querySelector(".cours-container");
+
+  try {
+    const response = await fetch("cours.json"); 
+    const data = await response.json();
+
+    container.innerHTML = ""; // Vide l’ancien HTML
+
+    data.cours.forEach(c => {
+      const bloc = document.createElement("div");
+      bloc.className = "carte-cours";
+
+      bloc.innerHTML = `
+        <h3>${c.titre}</h3>
+        <p>${c.description}</p>
+        <a href="${c.page}" class="btn-principal">Voir les leçons</a>
+        <ul>
+          ${c.fichiers
+            .map(f => `<li><a href="${f.fichier}" download class="btn-secondaire">📥 ${f.nom}</a></li>`)
+            .join("")}
+        </ul>
+      `;
+
+      container.appendChild(bloc);
+    });
+  } catch (err) {
+    container.innerHTML = "<p>Erreur de chargement des cours.</p>";
+    console.error(err);
+  }
+}
+
+chargerCours();
+</script>
+
+</body>
+</html>
