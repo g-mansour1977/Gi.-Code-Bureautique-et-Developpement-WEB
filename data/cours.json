@@ -1,0 +1,47 @@
+{
+  "cours": [
+    {
+      "titre": "💻 Word",
+      "description": "Maîtrisez la mise en forme de documents professionnels.",
+      "page": "word.html",
+      "fichiers": [
+        {"nom": "Cours 1", "fichier": "Gi. Code Cours Word 1 Présentation.pdf"},
+        {"nom": "Cours 2", "fichier": "Gi. Code Cours 2 Word.pdf"},
+        {"nom": "Cours 3", "fichier": "Gi. Code Cours 3 Word.pdf"},
+        {"nom": "Cours 4 & 5", "fichier": "Gi. Code Cours Word 4 & 5.pdf"},
+        {"nom": "Cours 6, 7 & 8", "fichier": "Gi. Code Cours Word 6 & 7 & 8.pdf"},
+        {"nom": "Cours 9", "fichier": "Gi. Code Cours Word 9.pdf"}
+      ]
+    },
+
+    {
+      "titre": "📊 Excel",
+      "description": "Créez des tableaux dynamiques et utilisez des formules.",
+      "page": "excel.html",
+      "fichiers": [
+        {"nom": "Présentation", "fichier": "Gi. Code Cours Excel Presentation.pdf"},
+        {"nom": "Cours 1", "fichier": "Skill 1 Excel.pdf"},
+        {"nom": "Cours 2", "fichier": "Skill 2 Excel.pdf"},
+        {"nom": "Cours 3", "fichier": "Skill 3 Excel.pdf"},
+        {"nom": "Cours 4", "fichier": "Skill 4 Excel.pdf"},
+        {"nom": "Cours 5", "fichier": "Skill 5 Excel.pdf"},
+        {"nom": "Cours 6", "fichier": "Skill 6 Excel.pdf"},
+        {"nom": "Cours 7", "fichier": "Skill 7 Excel.pdf"}
+      ]
+    },
+
+    {
+      "titre": "📽 PowerPoint",
+      "description": "Concevez des présentations modernes et efficaces.",
+      "page": "powerpoint.html",
+      "fichiers": [
+        {"nom": "Cours 1", "fichier": "Gi. Code Cours 1 PowerPoint.pdf"},
+        {"nom": "Cours 2", "fichier": "Gi. Code Cours 2 PowerPoint.pdf"},
+        {"nom": "Cours 3", "fichier": "Gi. Code Cours PowerPoint 3.pdf"},
+        {"nom": "Cours 4", "fichier": "Gi. Code Cours PowerPoint 4.pdf"},
+        {"nom": "Cours 5", "fichier": "Gi. Code Cours PowerPoint 5.pdf"},
+        {"nom": "Cours 6", "fichier": "Gi. Code Cours PowerPoint 6.pdf"}
+      ]
+    }
+  ]
+}
